@@ -1,14 +1,15 @@
-#include <stdio.h>
-#include <sys/syscall.h>
+#include<unistd.h>
 
 /**
-* main - Special printing
-*
-* Return: 1 for error
+ * main - Prints without printf or put using write
+ *
+ * Return: return 1 as the error
 */
+
 int main(void)
 {
-	const char msg[] = "and that piece of art is useful" - Dora Korpar, 2015-10-19";
-	syscall(SYS_write, 1, msg, sizeof(msg));
-	return(1);
+	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(1, str, 59);
+	return (1);
 }
