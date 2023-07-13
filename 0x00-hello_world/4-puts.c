@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * int main(void) - Prints out some text. Woohoo!!
+ * main - Prints out some text. Woohoo!!
  *
  * Return: 0 if function runs
  */
