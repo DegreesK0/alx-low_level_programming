@@ -1,6 +1,6 @@
-/*Prints out some text. Woohoo!!*/
 #include <stdio.h>
 
+/*Prints out some text. Woohoo!!*/
 int main(void)
 {
 	/*char str[] = "Programming is like building a multilingual puzzle";*/
