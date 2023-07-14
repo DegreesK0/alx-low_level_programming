@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	char digit1 = '0';
-	char digit2 = '0';
+	int digit1 = 48;
+	int digit2 = 48;
 
-	for (digit1 = '0'; digit1 <= '9'; digit1++)
+	for (digit1 = 48; digit1 <= 57; digit1++)
 	{
-		for (digit2 = '0'; digit2 <= '9'; digit2++)
+		for (digit2 = 48; digit2 <= 57; digit2++)
 		{
 			putchar(digit1);
 			putchar(',');
