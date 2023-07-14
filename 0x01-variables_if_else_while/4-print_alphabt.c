@@ -15,7 +15,7 @@ int main(void)
 	{
 		if (abc == 'q' || abc == 'e')
 		{
-			abc++;
+			continue;
 		}
       		else
       		{
