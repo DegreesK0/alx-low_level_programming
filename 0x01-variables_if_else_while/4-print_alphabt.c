@@ -17,12 +17,12 @@ int main(void)
 		{
 			continue;
 		}
-      		else
-      		{
+		else
+		{
 			putchar(abc);
 		}
 	}
-	
+
 	putchar('\n');
 
 	return (0);
