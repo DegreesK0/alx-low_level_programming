@@ -12,8 +12,11 @@ int main(void)
 	for (digit = 48; digit <= 57; digit++)
 	{
 		putchar(digit);
+		if (digit < 57)
+		{
 		putchar(',');
 		putchar(' ');
+		}
 	}
 
 	putchar('\n');
