@@ -1,0 +1,5 @@
+#!/bin/bash
+set -o noclobber
+printf '#!/bin/bash\n ' > $1
+set +o noclobber
+nvim $1
