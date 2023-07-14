@@ -2,7 +2,7 @@
 
 
 /**
-* main - prints out your abcs
+* main - prints out your abcs except 'q' and 'e'
 *
 * Return: 0 standard output
 */
