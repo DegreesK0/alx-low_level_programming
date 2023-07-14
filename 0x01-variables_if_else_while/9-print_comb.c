@@ -5,23 +5,17 @@
 *
 * Return: 0 is successful
 */
-
 int main(void)
 {
-	int digit1 = 48;
-	int digit2 = 48;
+	int digit = 48;
 
-	for (digit1 = 48; digit1 <= 57; digit1++)
+	for (digit = 48; digit <= 57; digit++)
 	{
-		for (digit2 = 48; digit2 <= 57; digit2++)
-		{
-			putchar(digit1);
-			putchar(',');
-			putchar(digit2);
-		}
+		putchar(digit);
+		putchar(',');
+		putchar(' ');
 	}
 
 	putchar('\n');
-
 	return (0);
 }
