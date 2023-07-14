@@ -8,6 +8,7 @@
 
 int main(void)
 {
+	
 	int digit1 = 48;
 	int digit2 = 49;
 
@@ -20,7 +21,7 @@ int main(void)
 			putchar(digit1);
 			putchar(digit2);
 			/* Skips the last , and "" at the end of 89 */
-			if (digit1 != 56 && digit2 != 57)
+			if (!(digit1 == 56 && digit2 == 57))
 			{
 				putchar(',');
 				putchar(' ');
