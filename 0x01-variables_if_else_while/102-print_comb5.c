@@ -23,7 +23,7 @@ int main(void)
 					{
 						digit3 = digit1;
 					}
-				for (digit4 = digit2 + 1; digit4 <= 57; digit4++)
+				for (digit4 = 49; digit4 <= 57; digit4++)
 				{
 					putchar(digit1);
 					putchar(digit2);
