@@ -13,7 +13,7 @@ int main(void)
 
 	for (digit1 = 48; digit1 <= 57; digit1++)
 	{
-		for (digit2 = digit1 +1; digit2 <= 57; digit2++)
+		for (digit2 = digit1 + 1; digit2 <= 57; digit2++)
 		{
 			putchar(digit1);
 			putchar(digit2);
