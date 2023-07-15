@@ -33,7 +33,7 @@ int main(void)
 					{
 						digit4 = digit2;
 					}*/
-					if (digit1 + digit2 < digit3 + digit4)
+					if (digit1 + digit2 <= digit3 + digit4)
 					{
 						putchar(digit1);
 						putchar(digit2);
