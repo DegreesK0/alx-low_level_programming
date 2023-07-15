@@ -33,7 +33,7 @@ int main(void)
 					{
 						digit4 = digit2;
 					}*/
-					if (digit3 > digit1)
+					if ((digit3 > digit1) || ((digit3 == digit1) && (digit4 > digit2)))
 					{
 						putchar(digit1);
 						putchar(digit2);
@@ -46,23 +46,7 @@ int main(void)
 							putchar(' ');
 						}
 					}
-	 				else if (digit3 == digit4)
-					{
-						if (digit4 > digit2)
-						{
-							putchar(digit1);
-							putchar(digit2);
-							putchar(' ');
-							putchar(digit3);
-							putchar(digit4);
-							if (digit1 != 57 || digit2 != 56 || digit3 != 57 || digit4 != 57)
-							{
-								putchar(',');
-								putchar(' ');
-							}
 
-						}
-					}
 				}
 			}
 		}
