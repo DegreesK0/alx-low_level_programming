@@ -33,8 +33,8 @@ int main(void)
 					{
 						continue;
 					}
-					if (digit1 != 57 || digit2 != 56 || digit3 != 57 || digit4 != 57)
-					{
+					if (digit1 != 57 || digit2 != 58 || digit3 != 57 || digit4 != 57) 
+	 				{
 						putchar(',');
 						putchar(' ');
 					}
