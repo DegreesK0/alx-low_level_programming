@@ -40,11 +40,11 @@ int main(void)
 						putchar(' ');
 						putchar(digit3);
 						putchar(digit4);
-					}
-					if (digit1 != 57 || digit2 != 56 || digit3 != 57 || digit4 != 57)
-					{
-						putchar(',');
-						putchar(' ');
+						if (digit1 != 57 || digit2 != 56 || digit3 != 57 || digit4 != 57)
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}
