@@ -19,10 +19,10 @@ int main(void)
 		{
 			for (digit3 = 48; (digit3 <= 57); digit3++)
 			{
-				if (digit3 < digit1)
+				/*if (digit3 < digit1)
 					{
 						digit3 = digit1;
-					}
+					}*/
 				for (digit4 = 48; digit4 <= 57; digit4++)
 				{
 					if (digit1 == 48 && digit2 == 48 && digit3 == 48 && digit4 == 48)
@@ -33,11 +33,14 @@ int main(void)
 					{
 						digit4 = digit2;
 					}*/
-					putchar(digit1);
-					putchar(digit2);
-					putchar(' ');
-					putchar(digit3);
-					putchar(digit4);
+					if (digit1 + digit2 < digit3 + digit4)
+					{
+						putchar(digit1);
+						putchar(digit2);
+						putchar(' ');
+						putchar(digit3);
+						putchar(digit4);
+					}
 					if (digit1 != 57 || digit2 != 56 || digit3 != 57 || digit4 != 57)
 					{
 						putchar(',');
