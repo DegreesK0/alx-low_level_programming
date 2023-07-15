@@ -23,16 +23,16 @@ int main(void)
 					{
 						digit3 = digit1;
 					}
-				for (digit4 = 48; digit4 <= 57; digit4++)
+				for (digit4 = digit2 + 1; digit4 <= 57; digit4++)
 				{
 					if (digit1 == 48 && digit2 == 48 && digit3 == 48 && digit4 == 48)
 					{
 						digit4 = 49;
 					}
-					if (digit4 < digit2)
+					/* if (digit4 < digit2)
 					{
 						digit4 = digit2;
-					}
+					} */
 					putchar(digit1);
 					putchar(digit2);
 					putchar(' ');
