@@ -29,10 +29,10 @@ int main(void)
 					{
 						digit4 = 49;
 					}
-					if (digit4 < digit2)
+					/*if (digit4 < digit2)
 					{
 						digit4 = digit2;
-					}
+					}*/
 					putchar(digit1);
 					putchar(digit2);
 					putchar(' ');
