@@ -19,20 +19,8 @@ int main(void)
 		{
 			for (digit3 = 48; (digit3 <= 57); digit3++)
 			{
-				/*if (digit3 < digit1)
-					{
-						digit3 = digit1;
-					}*/
 				for (digit4 = 48; digit4 <= 57; digit4++)
 				{
-					/*if (digit1 == 48 && digit2 == 48 && digit3 == 48 && digit4 == 48)
-					{
-						digit4 = 49;
-					}*/
-					/*if (digit4 < digit2)
-					{
-						digit4 = digit2;
-					}*/
 					if ((digit3 > digit1) || ((digit3 == digit1) && (digit4 > digit2)))
 					{
 						putchar(digit1);
