@@ -3,7 +3,6 @@
 /**
 * jack_bauer - prints out 24hours
 *
-* Return: Always 0
 */
 
 
@@ -24,6 +23,4 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 	}
-
-	return (0);
 }
