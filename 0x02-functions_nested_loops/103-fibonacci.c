@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - prints the first 50 Fibonacci numbers
+* main - prints the sum of even fibonacci numbers
 *
 * Return: 0? Yay, success.
 */
