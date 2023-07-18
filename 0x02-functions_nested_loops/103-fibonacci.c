@@ -12,6 +12,7 @@ int main(void)
 	long num1 = 0;
 	long num2 = 1;
 	long sum = 0;
+	long even_sum = 0;
 
 	for (i = 0; sum < 4000000; i++)
 	{
@@ -22,15 +23,12 @@ int main(void)
 
 		if (sum % 2 == 0)
 		{
-			printf("%ld", sum);
-
-			if (i == 49)
-				break;
-			printf("\n");
+			even_sum = even_sum + sum;
 		}
 	}
 
-	/*printf("\n");*/
+	printf("%ld", even_sum);
+	printf("\n");
 
 	return (0);
 }
