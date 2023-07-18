@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 /**
+* main - sums up all multiples of 5 or 3 up tile 1024 (excluded)
 *
+* Return: 0 is successful
 */
 
 int main(void)
