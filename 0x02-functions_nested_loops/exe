@@ -1,0 +1,3 @@
+#!/bin/bash
+chmod u+x -R .
+chmod u-x README.md

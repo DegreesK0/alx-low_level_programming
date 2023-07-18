@@ -1,0 +1,7 @@
+#!/bin/bash
+set -o noclobber
+printf '#!/bin/bash\n ' > $3
+set +o noclobber
+vi $1
+
+

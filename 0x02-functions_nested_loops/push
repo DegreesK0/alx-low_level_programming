@@ -1,0 +1,4 @@
+#/bin/bash
+git add .
+git commit -m "Basics of Functions in C"
+git push
