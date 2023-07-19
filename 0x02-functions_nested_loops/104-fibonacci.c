@@ -27,7 +27,7 @@ int main(void)
 	num2_half1 = num2 / 10000000000;
 	num2_half2 = num2 % 10000000000;
 
-	for (i = 90; i < 98; i++)
+	for (i = 90; i < 97; i++)
 	{
 		sum_half1 = num1_half1 + num2_half1;
 		sum_half2 = num1_half2 + num2_half2;
@@ -41,7 +41,7 @@ int main(void)
 		printf("%ld", sum_half1);
 		printf("%ld", sum_half2);
 
-		if (i == 97)
+		if (i == 96)
 			break;
 
 		printf(", ");
