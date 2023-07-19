@@ -29,8 +29,16 @@ int main(void)
 
 	for (i = 90; i < 98; i++)
 	{
-		sum_half1 = num1_half1 + num2_half1;
 		sum_half2 = num1_half2 + num2_half2;
+		if (sum_half2 > 99999999999)
+		{
+			sum_half2 = sum_half2 - 100000000000;
+			sum_half1 = num1_half1 + num2_half1 + 1;
+		}
+		else
+		{
+			sum_half1 = num1_half1 + num2_half1;
+		}
 
 		num1_half1 = num2_half1;
 		num1_half2 = num2_half2;
