@@ -18,7 +18,6 @@ int main(void)
 		sum = num1 + num2;
 		num1 = num2;
 		num2 = sum;
-
 		printf("%ld, ", sum);
 	}
 
@@ -36,22 +35,15 @@ int main(void)
 			sum_half1 = num1_half1 + num2_half1 + 1;
 		}
 		else
-		{
 			sum_half1 = num1_half1 + num2_half1;
-		}
-
 		num1_half1 = num2_half1;
 		num1_half2 = num2_half2;
-
 		num2_half1 = sum_half1;
 		num2_half2 = sum_half2;
-
 		printf("%ld", sum_half1);
 		printf("%ld", sum_half2);
-
 		if (i == 97)
 			break;
-
 		printf(", ");
 	}
 	printf("\n");
