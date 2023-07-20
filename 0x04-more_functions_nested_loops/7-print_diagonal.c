@@ -2,13 +2,14 @@
 
 /**
 * print_diagonal - prints a diagonal line of length n
+* @n: length of line
 */
 
 void print_diagonal(int n)
 {
 	int i;
 	int j;
-	
+
 	if (n <= 0)
 	{
 		_putchar('\n');
@@ -24,7 +25,7 @@ void print_diagonal(int n)
 				_putchar('\n');
 				continue;
 			}
-			
+
 			_putchar(' ');
 		}
 	}

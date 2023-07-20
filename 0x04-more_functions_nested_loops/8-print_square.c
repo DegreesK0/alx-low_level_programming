@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
-* print_square - prints a square of size n
-* @n: the size of the square
+* print_square - prints a square of size "size"
+* @size: the size of the square
 */
 
 void print_square(int size)
 {
 	int rows;
 	int columns;
-	
+
 	if (size <= 0)
 	{
 		_putchar('\n');
@@ -22,8 +22,8 @@ void print_square(int size)
 		{
 			_putchar('#');
 		}
-		
+
 		_putchar('\n');
-		
+
 	}
 }
