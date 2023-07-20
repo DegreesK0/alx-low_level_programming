@@ -1,8 +1,12 @@
 #include <stdio.h>
 
 /**
-* main - print out numbers 1 to 100, but replace multiples of 3 with Fizz, multiples of 5 with Buzz 
+* main - print out numbers 1 to 100, with a twist
+* Description: print out numbers 1 to 100, but replace
+* multiples of 3 with Fizz, multiples of 5 with Buzz
 * and multiples of 3 AND 5 with FizzBuzz
+*
+* Return: 0 means success
 */
 
 int main(void)
@@ -23,14 +27,14 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
-		else 
+		else
 		{
 			printf("%d ", num);
 		}
 	}
 
 	printf("\n");
-	
+
 	return (0);
 
 }
