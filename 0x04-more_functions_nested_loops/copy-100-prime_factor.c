@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /*
 *
@@ -6,18 +7,19 @@
 
 int main(void)
 {
-	long num = 12345678901;
+	long num = 612852475143;
 	long i;
 	long j;
+
 	/*int test = 25 / 2;
 
 	printf("%d\n", test);*/
 
-	for (i = num / 2; i > 0; i--)
+	for (i = sqrt(num); i > 0; i--)
 	{
 		if (num % i == 0)
 		{
-			for (j = 2; j < i; j++)
+			for (j = 2; j <= i; j++)
 			{
 				if (i % j == 0)
 				{
