@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* _strpy - copies the string pointed to by src to dest
+* _strcpy - copies the string pointed to by src to dest
 * @dest: destination string
 * @src: source string
 *
