@@ -24,14 +24,13 @@ char *_strcat(char *dest, char *src)
 		src_len++;
 
 	j = 0;
-	for (i = dest_len; i < dest_len + src_len - 1; i++)
+	for (i = dest_len; i < dest_len + src_len; i++)
 	{
 		dest[i] = src[j];
 		j++;
 	}
 
 	dest[i] = '\0';
-
 
 	return (dest);
 }
