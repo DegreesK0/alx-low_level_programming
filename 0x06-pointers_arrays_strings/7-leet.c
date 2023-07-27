@@ -11,15 +11,11 @@
 char *leet(char *str)
 {
 	int i, j;
-	int len = 0;
 
 	char *src =  "aAeEoOtTlL";
 	char *code = "4433007711";
 
-	while (str[len] != '\0')
-		len++;
-
-	for (i = 0; i < len; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
