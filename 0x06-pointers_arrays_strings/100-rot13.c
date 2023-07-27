@@ -2,20 +2,20 @@
 #include <stdio.h>
 
 /**
-* leet - encodes a string using 1337
+* rot13 - encodes a string using rot13
 * @str:  string to be encoded
 *
 * Return: encoded string
 */
 
-char *leet(char *str)
+char *rot13(char *str)
 {
 	int i, j;
 
-	char *src =  "aAeEoOtTlL";
-	char *code = "4433007711";
+	char *src =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *code = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != 0; i++)
 	{
 		for (j = 0; src[j] != '\0'; j++)
 		{
