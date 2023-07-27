@@ -26,7 +26,6 @@ char *leet(char *str)
 			if (str[i] == src[j])
 			{
 				str[i] = code[j];
-				break;
 			}
 		}
 	}
