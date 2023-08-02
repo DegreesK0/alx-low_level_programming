@@ -30,5 +30,8 @@ int _sqrt_recursion(int n)
 {
 	double initial_guess = 1.0;
 
+	if (n < 0)
+		return (-1);
+
 	return (sqrtRecursive(n, initial_guess));
 }
