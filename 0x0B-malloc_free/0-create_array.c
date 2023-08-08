@@ -24,6 +24,7 @@ char *create_array(unsigned int size, char c)
 	if (arr == NULL)
 	{
 		printf("Can't allocate %lu bytes (after %i calls)\n", sizeof(arr), i);
+		return (NULL);
 	}
 
 	for (i = 0; i < size; i++)
@@ -31,7 +32,7 @@ char *create_array(unsigned int size, char c)
 		arr[i] = c;
 	}
 
-	free(arr);
+	/* free(arr); */
 
 	return (arr);
 }
