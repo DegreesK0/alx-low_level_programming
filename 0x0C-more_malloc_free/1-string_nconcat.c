@@ -38,20 +38,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < len1; i++)
 		concat_str[i] = s1[i];
 
-	if (n <= len2)
-	{
-		for (j = 0; j < n; j++)
-			concat_str[i + j] = s2[j];
-	}
-	else
-	{
-		for (j = 0; j < len2; j++)
-			concat_str[i + j] = s2[j];
+	/* if (n <= len2) */
+	/* { */
+	/*	for (j = 0; j < n; j++) */
+	/*		concat_str[i + j] = s2[j]; */
+	/* } */
+	/* else */
+	/* { */
+	/*	for (j = 0; j < len2; j++) */
+	/*		concat_str[i + j] = s2[j]; */
+	/* } */
 
-	}
+	for (j = 0; j < n && s2[j] != '\0'; j++)
+		concat_str[i + j] = s2[j];
 
 	concat_str[i + j] = '\0';
-
-
 	return (concat_str);
 }
