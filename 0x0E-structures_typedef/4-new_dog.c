@@ -2,40 +2,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 /**
- * new_dog - function that creates a new dog
- * @name: the dogs name
- * @age: the dogs age
- * @owner: the dogs owners name
- *
- * Return: newDog
+* new_dog - new function
+* @name: name of dog
+* @age: age of dog
+* @owner: owner of dog
+* Return: new struct
  */
+
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newDog = malloc(sizeof(dog_t));
+	dog_t *new = (dog_t *)malloc(sizeof(dog_t));
 
-	if (newDog == NULL)
+	if (new == NULL)
+		return (NULL);
+	new->name = strdup(name);
+	if (new->name == NULL)
 	{
+		free(new);
 		return (NULL);
 	}
-
-	newDog->name = strdup(name);
-	newDog->age = age;
-	newDog->owner = strdup(owner);
-
-	/* strcpy(newDog->name, name); */
-	/* newDog->age = age; */
-	/* strcpy(newDog->owner, owner); */
-
-	if (newDog->name == NULL || newDog->owner == NULL)
+	new->age = age;
+	new->owner = strdup(owner);
+	if (new->owner == NULL)
 	{
-		free(newDog->name);
-		free(newDog->owner);
-		free(newDog);
+		free(new->name);
+		free(new);
 		return (NULL);
 	}
-
-	return (newDog);
+	return (new);
 }
