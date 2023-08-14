@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 /**
- *
+ * print_dog - prints out the dogs attributes
+ * @d: struct with dogs attributes
  */
 
 void print_dog(struct dog *d)
