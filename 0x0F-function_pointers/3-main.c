@@ -25,7 +25,8 @@ int main(int argc __attribute__((unused)), char *argv[])
 		return (99);
 	}
 
-	if ((strcmp(argv[2], "/") || strcmp(argv[2], "%")) && atoi(argv[3]) == 0)
+	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0)
+			&& atoi(argv[3]) == 0)
 	{
 		printf("Error\n");
 		return (100);
