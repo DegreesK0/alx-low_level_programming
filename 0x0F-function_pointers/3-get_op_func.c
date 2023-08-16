@@ -24,6 +24,11 @@ int (*get_op_func(char *s))(int, int)
 	/* char a = '+'; */
 	/* char *ptr = &a; */
 
+
+	/*if (strcmp(s, "+") != 0 && strcmp(s, "-") != 0 && */
+	/*		strcmp(s, "*") != 0 && strcmp(s, "/") != 0 && strcmp(s, "%") != 0) */
+	/*	return (NULL); */
+
 	while (ops[i].op != NULL)
 	{
 		if (strcmp(s, ops[i].op) == 0)
@@ -33,20 +38,6 @@ int (*get_op_func(char *s))(int, int)
 
 		i++;
 	}
-
-
-	/* for (i = 0; ops[i].op != NULL; i++) */
-	/* { */
-	/* 	if (strcmp(s, ops[i].op) == 0) */
-	/* 	{ */
-	/* 		return (ops[i].f); */
-	/* 	} */
-	/* } */
-
-
-	/* printf("%s\n", ops[0].op); */
-	/* return (ops[0].f); */
-	/* return (ops[0].f); */
 
 	return (NULL);
 }
