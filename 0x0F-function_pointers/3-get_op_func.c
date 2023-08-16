@@ -24,14 +24,24 @@ int (*get_op_func(char *s))(int, int)
 	/* char a = '+'; */
 	/* char *ptr = &a; */
 
-
-	for (i = 0; ops[i].op != NULL; i++)
+	while (ops[i].op != NULL)
 	{
 		if (strcmp(s, ops[i].op) == 0)
 		{
 			return (ops[i].f);
 		}
+
+		i++;
 	}
+
+
+	/* for (i = 0; ops[i].op != NULL; i++) */
+	/* { */
+	/* 	if (strcmp(s, ops[i].op) == 0) */
+	/* 	{ */
+	/* 		return (ops[i].f); */
+	/* 	} */
+	/* } */
 
 
 	/* printf("%s\n", ops[0].op); */
