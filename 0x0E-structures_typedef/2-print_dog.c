@@ -1,27 +1,45 @@
-#include "dog.h"
+/*#include "dog.h" */
+/*#include <stdio.h> */
+/*#include <stdlib.h> */
+
+/*/1** */
+/* * print_dog - prints out the dogs attributes */
+/* * @d: struct with dogs attributes */
+/* *1/ */
+
+/*void print_dog(struct dog *d) */
+/*{ */
+/*	if (d == NULL) */
+/*		return; */
+
+/*	if (d->name == NULL) */
+/*		printf("Name: (nil)\n"); */
+/*	else */
+/*		printf("Name: %s\n", (*d).name); */
+
+/*	printf("Age: %f\n", (*d).age); */
+
+/*	if (d->owner == NULL) */
+/*		printf("Owner: (nil)\n"); */
+/*	else */
+/*		printf("Owner: %s\n", d->owner); */
+/*} */
+
+
 #include <stdio.h>
-#include <stdlib.h>
+#include "dog.h"
 
 /**
- * print_dog - prints out the dogs attributes
- * @d: struct with dogs attributes
+ * print_dog - prints a struct dog
+ * @d: dog
+ * Return: void
  */
-
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
-		return;
-
-	if (d->name == NULL)
-		printf("Name: (nil)\n");
-	else
-		printf("Name: %s\n", (*d).name);
-
-	printf("Age: %f\n", (*d).age);
-
-	if (d->owner == NULL)
-		printf("Owner: (nil)\n");
-	else
-		printf("Owner: %s\n", d->owner);
+        if (d != NULL)
+        {
+                printf("Name: %s\n", d->name == NULL ? "(nil)" : d->name);
+                printf("Age: %.6f\n", d->age);
+                printf("Owner: %s\n", d->owner == NULL ? "(nil)" : d->owner);
+        }
 }
-
