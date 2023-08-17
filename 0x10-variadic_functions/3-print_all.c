@@ -35,11 +35,11 @@ void print_all(const char * const format, ...)
 				{
 					str = va_arg(data_types, char *);
 					if (str == NULL)
-						printf("%s%s", separator, str);
+						printf("%s(nil)", separator);
 					else
 						printf("%s%s", separator, str);
 				}
-					break;
+				break;
 			default:
 				i++;
 				continue;
