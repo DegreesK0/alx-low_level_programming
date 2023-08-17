@@ -13,6 +13,7 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0;
 	char *separator = "";
 	va_list data_types;
+	char *str;
 
 	va_start(data_types, format);
 
@@ -32,8 +33,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				{
-					char *str = va_arg(data_types, char *);
-
+					str = va_arg(data_types, char *);
 					if (str == NULL)
 						printf("%s%s", separator, str);
 					else
