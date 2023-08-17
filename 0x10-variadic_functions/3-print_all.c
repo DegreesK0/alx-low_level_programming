@@ -32,7 +32,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				{
-					char *str = va_arg(data_types, char*);
+					char *str = va_arg(data_types, char *);
 
 					if (str == NULL)
 						printf("%s%s", separator, str);
