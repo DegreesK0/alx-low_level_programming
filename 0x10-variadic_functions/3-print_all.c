@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0;
 	char *separator = "";
-
+	char *str;
 	va_list data_types;
 
 	va_start(data_types, format);
@@ -32,7 +32,10 @@ void print_all(const char * const format, ...)
 				printf("%s%f", separator, va_arg(data_types, double));
 				break;
 			case 's':
-				printf("%s%s", separator, va_arg(data_types, char *));
+				str = va_arg(data_types, char *);
+				if (str == NULL)
+					str = "(nil)";
+				printf("%s%s", separator, str);
 				break;
 			default:
 				i++;
@@ -43,7 +46,5 @@ void print_all(const char * const format, ...)
 	}
 
 	va_end(data_types);
-
 	printf("\n");
-
 }
