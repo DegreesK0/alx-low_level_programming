@@ -9,22 +9,46 @@
  * Return: the number of nodes
  */
 
+/* size_t print_list(const list_t *h) */
+/* { */
+/* 	/1* struct list_s *current; *1/ */
+/* 	int num_nodes = 0; */
+
+/* 	while (h != NULL) */
+/* 	{ */
+/* 		printf("[%d] ", h->len); */
+/* 		if (h->str == NULL) */
+/* 			printf("(nil) "); */
+/* 		else */
+/* 			printf("%s", h->str); */
+/* 		printf("\n"); */
+/* 		num_nodes++; */
+/* 		h = h->next; */
+/* 	} */
+
+/* 	return (num_nodes); */
+/* } */
+
+
 size_t print_list(const list_t *h)
 {
-	/* struct list_s *current; */
-	int num_nodes = 0;
+	size_t count = 0;
 
 	while (h != NULL)
 	{
-		printf("[%d] ", h->len);
+		if (h != NULL && h->str != NULL)
+		{
+			printf("[%u] %s\n", h->len, h->str);
+		}
 		if (h->str == NULL)
-			printf("(nil) ");
-		else
-			printf("%s", h->str);
-		printf("\n");
-		num_nodes++;
+			printf("[0] (nil)\n");
+		count++;
 		h = h->next;
 	}
-
-	return (num_nodes);
+	return (count);
 }
+
+
+
+
+
