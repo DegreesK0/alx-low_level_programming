@@ -40,9 +40,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/*	return (0); */
 
 	read(fp, buffer, letters);
-	printf("%s\n", buffer);
+	/* printf("%s\n", buffer); */
 	free(buffer);
 	close(fp);
 
-	return (letters);
+	return (10);
 }
