@@ -17,16 +17,9 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	/* FILE *fp; */
-	/* char ch[10000]; */
-	/* fp = fopen(filename, "r"); */
-	/* printf("%s", fgets(ch, letters, fp)); */
-
-	/* fclose(fp); */
-	/* return (letters); */
-
-	int fp;
+	int fp; /* File descriptor, not file pointer */
 	char *buffer;
+	ssize_t bytes_read, bytes_written;
 
 	if (filename == NULL)
 		return (0);
@@ -36,13 +29,30 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	fp = open(filename, O_RDONLY);
-	/* if (fp == NULL) */
-	/*	return (0); */
+	if (fp == -1)
+	{
+		free(buffer);
+		return (0);
+	}
 
-	read(fp, buffer, letters);
-	write(STDOUT_FILENO, buffer, letters);
+	bytes_read = read(fp, buffer, letters);
+	if (bytes_read == -1)
+	{
+		free(buffer);
+		close(fp);
+		return (0);
+	}
+
+	bytes_written = write(STDOUT_FILENO, buffer, letters);
+	if (bytes_written == -1)
+	{
+		free(buffer);
+		close(fp);
+		return (0);
+	}
+
 	free(buffer);
 	close(fp);
 
-	return (letters);
+	return (bytes_written);
 }
