@@ -1,0 +1,4 @@
+#!/bin/bash
+git add *.c *.h
+git commit -m "Upload"
+git push
