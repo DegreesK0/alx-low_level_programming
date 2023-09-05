@@ -9,36 +9,30 @@
 
 
 /**
- * create_file - creates a file
- * @filename: name of file to be created
- * @text_content: text to be written to the file
+ * create_file - a
+ * @filename: a
+ * @text_content: a
  *
- * Return: 1 on success, -1 on failure
+ * Return: a
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	/* char *buffer; */
-	int bytes_written;
-	int len;
+	int fd, w, len = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	len = 0;
-	while (text_content[len])
+	if (text_content != NULL)
+	{
+		for (len = 0; text_content[len];)
 		len++;
-	/* buffer = malloc(sizeof(text_content)); */
+	}
 
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	bytes_written = write(fd, text_content, len);
-	if (fd == -1 || bytes_written == -1)
-	{
-		/* close(fd); */
+	w = write(fd, text_content, len);
+	if (fd == -1 || w == -1)
 		return (-1);
-	}
 	close(fd);
-
 	return (1);
 }
