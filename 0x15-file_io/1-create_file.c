@@ -21,14 +21,18 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	/* char *buffer; */
 	int bytes_written;
+	int len;
 
 	if (filename == NULL)
 		return (-1);
 
+	len = 0;
+	while (text_content[len])
+		len++;
 	/* buffer = malloc(sizeof(text_content)); */
 
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	bytes_written = write(fd, text_content, strlen(text_content));
+	bytes_written = write(fd, text_content, len);
 	if (fd == -1 || bytes_written == -1)
 	{
 		close(fd);
