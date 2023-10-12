@@ -15,11 +15,11 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	{
 		if (count == index)
 		{
-			return (head); // Found the desired node, return its pointer
+			return (head);
 		}
 		head = head->next;
 		count++;
 	}
 
-	return (NULL); // Index out of range, node doesn't exist
+	return (NULL);
 }
